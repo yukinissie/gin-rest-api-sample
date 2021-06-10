@@ -1,4 +1,6 @@
 # gin-rest-api-sample
+Ginの勉強用個人レポジトリ
+
 ## build & run
 
 ```
