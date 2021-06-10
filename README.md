@@ -20,7 +20,7 @@ curl --location --request POST 'localhost:3000/api/scenario' \
 }'
 ```
 
-Read Scenario
+Read Scenario.
 
 ```
 curl --location --request GET 'localhost:3000/api/scenario'
