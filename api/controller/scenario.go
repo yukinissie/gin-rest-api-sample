@@ -2,7 +2,7 @@ package controller
 
 import (
 	"main/model"
-	"main/service"
+	service "main/service/scenario"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -15,8 +15,8 @@ func ScenarioAdd(c *gin.Context) {
 		c.String(http.StatusBadRequest, "Bad request")
 		return
 	}
-	scenarioService := service.ScenarioService{}
-	err = scenarioService.SetScenario(&scenario)
+	setScenarioService := service.SetScenarioService{}
+	err = setScenarioService.Excute(&scenario)
 	if err != nil {
 		c.String(http.StatusInternalServerError, "Server Error")
 		return
@@ -27,8 +27,8 @@ func ScenarioAdd(c *gin.Context) {
 }
 
 func ScenarioList(c *gin.Context) {
-	scenarioService := service.ScenarioService{}
-	ScenarioLists, err := scenarioService.GetScenarioList()
+	getScenarioService := service.GetScenarioService{}
+	ScenarioLists, err := getScenarioService.Excute()
 	if err != nil {
 		c.String(http.StatusInternalServerError, "Server Error")
 		return
