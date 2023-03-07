@@ -14,5 +14,5 @@ require (
 	github.com/onsi/gomega v1.13.0 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/ugorji/go v1.2.5 // indirect
-	golang.org/x/crypto v0.0.0-20210415154028-4f45737414dc // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 )
